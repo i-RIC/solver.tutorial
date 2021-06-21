@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(<BASENAME> Fortran)
+project(Example Fortran)
 
 include(GNUInstallDirs)
 
@@ -14,17 +14,17 @@ if(IRIC_SOLVER_USE_OPENMP)
   find_package(OpenMP REQUIRED)
 endif()
 
-add_executable(<BASENAME>
+add_executable(Example
   <ADD SOURCE FILES HERE>
 )
 
-target_link_libraries(<BASENAME> PRIVATE iriclib::iriclib)
+target_link_libraries(Example PRIVATE iriclib::iriclib)
 
 if(IRIC_SOLVER_USE_OPENMP AND OpenMP_Fortran_FOUND)
-  target_link_libraries(<BASENAME> PRIVATE OpenMP::OpenMP_Fortran)
+  target_link_libraries(Example PRIVATE OpenMP::OpenMP_Fortran)
 endif()
 
-install(TARGETS <BASENAME> DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(TARGETS Example DESTINATION "${CMAKE_INSTALL_BINDIR}")
 
 install(FILES <LOCATION OF definition.xml> DESTINATION "${CMAKE_INSTALL_BINDIR}")
 
