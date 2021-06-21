@@ -9,7 +9,7 @@ include(GNUInstallDirs)
 find_package(iriclib REQUIRED)
 
 # Change this to ON if solver requires OpenMP
-option(IRIC_SOLVER_USE_OPENMP "Solver requires OpenMP" OFF)
+option(IRIC_SOLVER_USE_OPENMP "Solver requires OpenMP" ON)
 if(IRIC_SOLVER_USE_OPENMP)
   find_package(OpenMP REQUIRED)
 endif()
