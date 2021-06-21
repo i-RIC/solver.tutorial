@@ -211,7 +211,7 @@ endif()
 
 install(TARGETS Example DESTINATION "${CMAKE_INSTALL_BINDIR}")
 
-install(FILES <LOCATION OF definition.xml> DESTINATION "${CMAKE_INSTALL_BINDIR}")
+install(FILES iric/definition.xml DESTINATION "${CMAKE_INSTALL_BINDIR}")
 
 # include(CTest)
 
