@@ -142,7 +142,7 @@ jobs:
     - name: Commit and push branch
       uses: actions-js/push@master
       with:
-        github_token: ${{secrets.WORKFLOW_PAT}}
+        github_token: ${{secrets.SOLVER_TUTORIAL_PAT}}
         repository: ${{env.ONLINE_UPDATE_REPO}}
         directory: online_update
         branch: __${{github.event.repository.name}}_${{github.run_number}}        # @todo remove branch
